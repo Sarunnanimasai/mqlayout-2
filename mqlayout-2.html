@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @media (orientation: landscape) {
+        #container {
+          width: 1000px;
+          height: 500px;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          grid-template-areas:
+            "nav nav"
+            "a b";
+          gap: 10px;
+          margin: auto;
+        }
+      }
+      @media (orientation: portrait) {
+        #container {
+          width: 500px;
+          height: 500px;
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-rows: repeat(3, 1fr);
+          grid-template-areas:
+            "nav nav"
+            "a a"
+            "b b";
+          gap: 10px;
+          margin: auto;
+        }
+      }
+      #Navigation {
+        background-color: yellow;
+        grid-area: nav;
+        margin-top: 120px;
+        display: flex;
+        align-items: center;
+        font-size: larger;
+        font-weight: bold;
+        padding-left: 10px;
+      }
+      #LEFTBOX {
+        background-color: red;
+        grid-area: a;
+        display: flex;
+        align-items: center;
+        font-size: larger;
+        font-weight: bold;
+        padding-left: 10px;
+      }
+      #RIGHTBOX {
+        background-color: green;
+        grid-area: b;
+        display: flex;
+        align-items: center;
+        font-size: larger;
+        font-weight: bold;
+        padding-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="Navigation">Navigation</div>
+      <div id="LEFTBOX">LEFTBOX</div>
+      <div id="RIGHTBOX">RIGHTBOX</div>
+    </div>
+  </body>
+</html>
